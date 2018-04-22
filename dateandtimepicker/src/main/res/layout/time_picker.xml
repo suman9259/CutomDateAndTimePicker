@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="horizontal"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <com.example.dateandtimepicker.widget.WheelHourPicker
+            android:id="@+id/tp_hoursPicker"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            app:wheel_atmospheric="true"
+            app:wheel_item_align="center"
+            />
+
+        <com.example.dateandtimepicker.widget.WheelMinutePicker
+            android:id="@+id/tp_minutesPicker"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:wheel_atmospheric="true"
+            app:wheel_item_align="center"
+            />
+
+        <com.example.dateandtimepicker.widget.WheelAmPmPicker
+            android:id="@+id/tp_amPmPicker"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:wheel_atmospheric="true"
+            app:wheel_item_align="center"
+            app:wheel_visible_item_count="2"
+            android:paddingLeft="30dp"
+            android:layout_marginRight="15dp"
+            />
+    </LinearLayout>
+    <View
+        android:id="@+id/tp_time_Selector"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/wheelSelectorHeight"
+        android:layout_gravity="center_vertical"
+        android:alpha="0.2"
+        android:background="@color/picker_default_selector_color"/>
+
+</FrameLayout>
